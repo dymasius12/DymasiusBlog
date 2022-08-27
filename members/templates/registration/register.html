@@ -1,0 +1,29 @@
+<!-- Everything inside the block content will be used in the base.html -->
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+
+<h1>Register..</h1>
+<br/><br/>
+
+<div class="form-group">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn btn-secondary">Register</button>
+    </form>
+</div>
+
+
+
+
+<!-- Below are the code for home -->
+<!-- <ul>
+{% for post in object_list %}
+    <li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }} </a> - {{ post.author.first_name }} {{ post.author.last_name }}<br>
+    {{ post.body }}</li>
+{% endfor %}
+</ul> -->
+
+{% endblock %}

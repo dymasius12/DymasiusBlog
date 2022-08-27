@@ -1,0 +1,29 @@
+<!-- Everything inside the block content will be used in the base.html -->
+{% extends 'base.html' %}
+{% block title %}Delete Your Blog Post!{% endblock %}
+{% block content %}
+
+<h1>Delete Post!..</h1>
+<br/><br/>
+<h3>Delete: {{ post.title }} </h3>
+<br/>
+<div class="form-group">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <strong>Are you sure??</strong><br/><br/>
+        <button class="btn btn-secondary">Delete Post!</button>
+    </form>
+</div>
+
+
+
+
+<!-- Below are the code for home -->
+<!-- <ul>
+{% for post in object_list %}
+    <li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }} </a> - {{ post.author.first_name }} {{ post.author.last_name }}<br>
+    {{ post.body }}</li>
+{% endfor %}
+</ul> -->
+
+{% endblock %}
