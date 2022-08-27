@@ -3,6 +3,8 @@
 {% block title %}Delete Your Blog Post!{% endblock %}
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <h1>Delete Post!..</h1>
 <br/><br/>
 <h3>Delete: {{ post.title }} </h3>
@@ -16,7 +18,11 @@
 </div>
 
 
+{% else %}
 
+<h1>Oops! You Have Not Login..</h1>
+
+{% endif %}
 
 <!-- Below are the code for home -->
 <!-- <ul>
